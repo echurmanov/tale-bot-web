@@ -1,15 +1,5 @@
-.App {
-    padding: 20px;
-}
-
-.App h1 {
-    font-size: 26px;
-}
-
-.App input {
-    padding: 10px;
-}
-
-.App hr {
-    margin-top: 20px;
+.form-signin {
+    width: 330px;
+    padding: 15px;
+    margin: 0 auto;
 }
