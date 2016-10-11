@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
-//TODO: Тут импортируем редусеры
+import loginReducer from './loginReducer';
+// TODO: Тут импортируем редусеры
+
 export default combineReducers({
-  //TODO: регистрируем редусеры
+  // TODO: регистрируем редусеры
+  login: loginReducer
 });

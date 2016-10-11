@@ -1,10 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import Grid  from 'react-bootstrap/lib/Grid';
-import Nav from 'react-bootstrap/lib/Nav';
 import Navbar from 'react-bootstrap/lib/Navbar';
-import NavItem  from 'react-bootstrap/lib/NavItem';
 import { Link } from 'react-router';
-import LinkContainer from 'react-router-bootstrap/lib/LinkContainer';
 import './bootstrap.css';
 
 const propTypes = {
@@ -23,9 +20,7 @@ class App extends Component {
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
-          <Navbar.Collapse>
-
-          </Navbar.Collapse>
+          <Navbar.Collapse/>
         </Navbar>
         <Grid>
           {this.props.children}
