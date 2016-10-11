@@ -54,6 +54,7 @@ class LoginPage extends Component {
 
   render() {
     const { loading } = this.props;
+
     return (
       <div className='LoginPage'>
         <div className='container'>
@@ -90,6 +91,7 @@ class LoginPage extends Component {
 
 function mapStateToProps(action) {
   const { loading, state } = action.login;
+
   return { loading, state };
 }
 

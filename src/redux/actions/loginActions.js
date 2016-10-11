@@ -20,6 +20,23 @@ export function loginRequest(params) {
   return (dispatch) => {
     dispatch(loginRequestStarted());
 
-    return setTimeout(() => dispatch(loginRequestFinished({ success: true })), 1500); // Изображаем network latency :)
+    return fetch('/api/login/', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    }).then((response) => {
+      if (response.status !== 200) {
+        throw new Error(['API Response Status Error:', response.status, response.statusText].join(' '));
+      }
+      return response.json();
+    }).then((resJson) => {
+      console.log('JSON', resJson);
+      dispatch(loginRequestFinished({ success: true }));
+    }).catch((error) => {
+      dispatch(loginRequestError(error));
+    });
   };
 }
